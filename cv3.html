@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all">
+    <div class="container mx-auto px-4 py-10">
+        <!-- Hero Section -->
+        <section class="text-center">
+            <img src="https://raw.githubusercontent.com/MOIS256/imagenes/main/moises.jpg" alt="Foto de Perfil" class="w-32 h-32 mx-auto rounded-full shadow-lg">
+            <h1 class="text-4xl font-bold mt-4">Moises Ku Cituk</h1>
+            <p class="text-xl text-gray-500 dark:text-gray-400">Policía de Tránsito</p>
+        </section>
+
+        <!-- Sobre Mí -->
+        <section class="mt-10">
+            <h2 class="text-2xl font-semibold">Sobre Mí</h2>
+            <p class="text-gray-600 dark:text-gray-300 mt-2">Policía de Tránsito con más de 10 años de experiencia en el área operativa y administrativa, especializado en la detección de vehículos, administración documental y derechos humanos en la labor policial.</p>
+        </section>
+
+        <!-- Habilidades -->
+        <section class="mt-10">
+            <h2 class="text-2xl font-semibold">Habilidades</h2>
+            <div class="flex flex-wrap gap-4 mt-4">
+                <span class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded">Manejo de base de datos</span>
+                <span class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded">Paquetería de oficina</span>
+                <span class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded">Mantenimiento de equipos de cómputo</span>
+                <span class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded">Sistemas Operativos</span>
+                <span class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded">Redes</span>
+            </div>
+        </section>
+
+        <!-- Experiencia -->
+        <section class="mt-10">
+            <h2 class="text-2xl font-semibold">Experiencia</h2>
+            <div class="mt-4">
+                <p class="font-bold">Dirección General de Seguridad Pública, Policía de Tránsito</p>
+                <p class="text-gray-600 dark:text-gray-300">Junio 2011 – Octubre 2021: Policía de Tránsito en el área operativa y encargado del área de licencias.</p>
+                <p class="text-gray-600 dark:text-gray-300">Octubre 2021 – Actualidad: Capturista, elaboración de reportes mensuales y anuales.</p>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="mt-10">
+            <h2 class="text-2xl font-semibold">Contacto</h2>
+            <p class="text-gray-600 dark:text-gray-300">Teléfono: 9842023022</p>
+            <p class="text-gray-600 dark:text-gray-300">Correo Electrónico: moises.ku@gmail.com</p>
+        </section>
+
+        <!-- Switch Modo Oscuro -->
+        <div class="mt-10 text-center">
+            <button id="toggleDarkMode" class="px-4 py-2 bg-gray-800 text-white rounded">Modo Oscuro</button>
+        </div>
+    </div>
+
+    <script>
+        const toggleDarkMode = document.getElementById('toggleDarkMode');
+        toggleDarkMode.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            localStorage.setItem('dark-mode', document.body.classList.contains('dark'));
+        });
+        if (localStorage.getItem('dark-mode') === 'true') document.body.classList.add('dark');
+    </script>
+</body>
+</html>
